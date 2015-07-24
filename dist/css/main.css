@@ -1,0 +1,39 @@
+header {
+  color: red;
+}
+@media only screen and (min-width: 768px) {
+  header {
+    color: green;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  header {
+    color: blue;
+  }
+}
+section {
+  color: green;
+}
+@media only screen and (min-width: 768px) {
+  section {
+    color: blue;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  section {
+    color: red;
+  }
+}
+article {
+  font-size: 24px;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  article {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 479px), only screen and (min-width: 768px) and (max-width: 959px) {
+  article {
+    font-size: 12px;
+  }
+}

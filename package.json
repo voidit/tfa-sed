@@ -1,0 +1,35 @@
+{
+  "name": "ui-tfa-bootstrap",
+  "version": “0.1.1”,
+  "description": “Supportive code to TFA SED study group”,
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "proot": "echo $npm_config_root",
+    "build-sed-css": "$(npm bin)/lessc src/less/main.less > dist/css/main.css",
+    "build-sed-js": "$(npm bin)/uglifyjs src/js/index.js -o dist/js/index-${npm_package_version}.js --keep-fnames --lint -v -c -d --screw-ie8 -b",
+    "build-sed": "npm run build-sed-css && npm run build-sed-js"
+
+  },
+  "author": "Teach For America",
+  "license": "C",
+  "private": true,
+  "devDependencies": {
+    "bootstrap": "3.3.4",
+    "jquery": "2.1.4",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.12.33",
+    "karma-jasmine": "^0.3.5",
+    "less": "^2.5.1",
+    "uglify-js": "",
+    "requirejs": "",
+    "font-awesome": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/voidit/tfa-sed.git"
+  }
+}
