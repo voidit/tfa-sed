@@ -1,0 +1,109 @@
+/*
+Modern browsers limit the styles that can be applied with :visited.
+*/
+:visited{}
+
+/*
+:hover Can apply to any element on the page—not just links and form controls.
+For better accessibility, add :focus wherever you include :hover as not all visitors will use a mouse to navigate your site.
+*/
+:hover, :focus{}
+
+/*
+:focus and :active are relevant to links, form controls, content editable elements, and any element with a tabindex attribute.
+*/
+:hover, :focus, :active{}
+
+/*
+A user interface element that’s enabled, which is basically any form control that supports the disabled attribute but doesn’t currently have it applied.
+*/
+:enabled{}
+
+/*
+Conversely, a user interface element that is disabled: any form control that supports the disabled attribute and currently has it applied.
+*/
+:disabled{}
+
+/*For radio buttons or checkboxes that are selected or ticked.*/
+:checked{}
+
+/*
+For form elements that are neither checked nor unchecked. For example, if you tick a check all checkbox to select a group of checkboxes,
+then deselect some but not all of the checkboxes in the group, the check all could be set to the indeterminate state (with JavaScript) to indicate that it’s neither checked nor unchecked.
+*/
+:indeterminate{}
+
+/*
+This selector singles out the element that is the target of the currently active intrapage anchor.
+That sounds more complicated than it is: you already know that you can have links to anchors within a page by using the # character with the ID of the target.
+For example, you may have <a href="#content">Skip to content</a> link in your page that, when clicked, will jump to the element with an ID of content.
+
+This changes the URL in the address bar to thispage.html#content—and the :target selector now matches the element in the document that has content as its ID.
+It's as if you had included, temporarily, the selector #content. We say temporarily because as soon as the user clicks on a different anchor, :target will match the new target.
+*/
+:target{}
+
+/*
+Applies to one or more UI elements that are the default among a set of similar elements.
+For example, the one radio button in a group of same-named radio buttons that was checked on page load will continue to match :default after another radio button in the same-named group is selected.
+Similarly, checkboxes that are selected on page load will continue to match :default after they are unchecked.
+*/
+:default{}
+
+/*
+Applies to elements that are valid, based on the type, pattern, or other input attributes (as we discussed in Chapter 4).
+*/
+:valid{}
+
+/*
+Applies to empty required elements and elements failing to match the requirements defined by the type or pattern attributes.
+*/
+:invalid{}
+
+/*Applies to elements with range limitations where the value is within those limitations.
+This applies, for example, to date/time, number, and range input types with min and max attributes.
+When the value is null, it is :in-range.*/
+:in-range{}
+
+/*
+The opposite of :in-range: elements whose value is outside the limitations of their range.
+Missing values are not out of range, as they are empty.
+*/
+:out-of-range{}
+
+/*
+Applies to form controls that have the required attribute set.
+*/
+:required{}
+
+/*
+Applies to all form controls that do not have the required attribute.
+*/
+:optional{}
+
+/*
+Applies to elements whose contents are unable to be altered by the user.
+This is most elements other than those with the contenteditable attribute set and form fields.
+*/
+:read-only{}
+
+/*
+Applies to elements whose contents are user-alterable, such as contenteditable components and writable input fields.
+*/
+:read-write{}
+
+
+/*
+Browser support for these attributes is complete in browsers that support the attributes in their form controls;
+in other words, browsers that support required and pattern also support the associated :valid and :invalid pseudo-classes.
+*/
+
+/*
+IE8 and earlier lack support for :checked, :enabled, :disabled, and :target.
+The good news is that IE9 does support these selectors, but not the user-interface selectors.
+IE10 and IE11 support :indeterminate, :required, and :optional, but not :default, :in-range, :out-of-range, :read-only, or :read-write.
+*/
+
+/*
+While support is still lacking, JavaScript libraries such as Selectivizr can help in targeting these pseudo-classes in Internet Explorer.
+*/
