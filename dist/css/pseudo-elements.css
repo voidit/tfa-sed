@@ -1,0 +1,29 @@
+::selection
+/*The ::selection pseudo-element matches user-selected or highlighted text.*/
+
+::first-letter{}
+
+::first-line{}
+
+::first-child{}
+
+::before{}
+
+::after{}
+
+a[href$=".pdf"] {
+    background: transparent url(pdficon.gif) 0 50% no-repeat;
+    padding-left: 20px;
+}
+a[href$=".pdf"]:after {
+    content: " (PDF)";
+}
+
+::-moz-selection {
+    background: #484848;
+    color: #fff;
+}
+::selection {
+    background: #484848;
+    color: #fff;
+}

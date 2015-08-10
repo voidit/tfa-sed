@@ -1,0 +1,45 @@
+:root
+/*The root element, which is the html element in our HTML files.*/
+
+E:nth-child(n)
+/*The element E that is the nth child of its parent. The n parameter is explained in the note below.*/
+
+E:nth-last-child(n)
+/*The element F that is the nth child of its parent E, counting backwards from the last one. li:nth-last-child(1) would match the last item in any list—this is the same as li:last-child (see the note below).*/
+
+E:nth-of-type(n)
+/*The element that is the nth element of its type in a given parent element.The difference between :nth-child and :nth-of-type is explained in the note below.*/
+
+E:nth-last-of-type(n)
+/*Like nth-of-type(n), except counting backwards from the last element in a parent.*/
+
+
+E:first-child
+/*The element E if E is the first child of its parent. This is the same as E:nth-child(1).*/
+
+E:last-child
+/*The element E if E is the last child of its parent, same as E:nth-last-child(1).*/
+
+E:first-of-type
+/*The same as :nth-of-type(1).*/
+
+E:last-of-type
+/*The same as :nth-last-of-type(1).*/
+
+E:only-child
+/*Element E if E is the only child of its parent.*/
+
+E:only-of-type
+/*Element E if E is the only element of type E that is a direct child of its parent element.*/
+
+
+E:empty
+/*An element that has no children; this includes text nodes, so <p>hello</p> and <p> </p> will not be matched by p:empty, but <p></p> and <p><!-- comment --></p> will be. This selector also matches empty or void elements, such as <br> and <input>. In CSS Selectors Level 4, we’ll get p:blank that will match <p> </p>.*/
+
+E:lang(en)
+/*An element in the language denoted by the two-letter abbreviation, such as en. Unlike E:[lang|=en], where the lang attribute must be present as an attribute of element E, E:lang(en) will match E if the language was declared on the element itself or any ancestor.*/
+
+E:not(exception)
+/*This is a particularly useful one: it will select elements that don’t match the selector in the parentheses.*/
+
+/*Selectors with the :not pseudo-class match everything to the left of the colon, and then exclude from that matched group the elements that also match what’s to the right of the colon. The left-hand side matching goes first. For example, p:not(.copyright) will match all the paragraphs in a document first, and then exclude all the paragraphs from the set that also have the class of copyright. You can string several :not pseudo-classes together. input:not([type=checkbox]):not([type=radio]) will match all input elements on a page except those that are of type checkbox or radio.*/

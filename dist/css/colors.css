@@ -1,0 +1,81 @@
+/*
+RGB
+Red   0-255
+Green 0-255
+Blue  0-255
+*/
+.rgb {
+    background: rgba(0, 0, 0);
+}
+
+/*
+RGBA
+Red   0-255
+Green 0-255
+Blue  0-255
+Alpha 0.0-1.0
+*/
+.rgba {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+
+/*
+HSL
+
+The hue in degrees from 0 to 359.
+0 = red, 60 = yellow, 120 = green, 180 = cyan, 240 = blue, and 300 = magenta.
+
+Saturation 0% - 100%
+100% will be the full hue, and saturation of 0 will give you a shade of gray—essentially causing the hue value to be ignored.
+
+Lightness 0% - 100%
+A percentage for lightness with 50% being the norm.
+Lightness of 100% will be white, 50% will be the actual hue, and 0% will be black.
+
+*/
+
+.hsl {
+    background: hsl(120, 80%, 50%);
+}
+
+/*
+HSLA
+
+The hue in degrees from 0 to 359.
+0 = red, 60 = yellow, 120 = green, 180 = cyan, 240 = blue, and 300 = magenta.
+
+Saturation 0% - 100%
+100% will be the full hue, and saturation of 0 will give you a shade of gray—essentially causing the hue value to be ignored.
+
+Lightness 0% - 100%
+A percentage for lightness with 50% being the norm.
+Lightness of 100% will be white, 50% will be the actual hue, and 0% will be black.
+
+Alpha 0.0-1.0
+
+*/
+
+.hsla {
+    background: hsl(120, 80%, 50%, 0.2);
+}
+
+/*
+Last, but certainly not least, CSS Color Module Level 3 provides us with currentColor. The currentColor keyword is equal to the current element’s color property.
+
+In CSS Colors Level 4, we get four- and eight-digit hex colors with the last digit(s) specifying transparency, hwb() and hwba() to specify colors by hue, whiteness and blackness, plus a gray() function to enable a shorter method for declaring shades of gray.
+*/
+
+/*
+OPACITY
+*/
+div.halfopaque {
+    background-color: rgb(0, 0, 0);
+    opacity: 0.5;
+    color: #000000;
+}
+
+div.halfalpha {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #000000;
+}
