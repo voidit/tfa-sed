@@ -43,3 +43,57 @@ E:not(exception)
 /*This is a particularly useful one: it will select elements that don’t match the selector in the parentheses.*/
 
 /*Selectors with the :not pseudo-class match everything to the left of the colon, and then exclude from that matched group the elements that also match what’s to the right of the colon. The left-hand side matching goes first. For example, p:not(.copyright) will match all the paragraphs in a document first, and then exclude all the paragraphs from the set that also have the class of copyright. You can string several :not pseudo-classes together. input:not([type=checkbox]):not([type=radio]) will match all input elements on a page except those that are of type checkbox or radio.*/
+
+aside p + a {
+    display: block;
+    text-decoration: none;
+    border: 5px double;
+    border-radius: 25px;
+    color: #ffffff;
+    background-color: #484848;
+    box-shadow: 2px 5px 0 0 rgba(72,72,72,1);
+    text-align: center;
+    font-size: 1.75rem;
+    margin: 5px 5px 9px 5px;
+    padding: 15px 0;
+    position: relative;
+}
+
+/*
+The box-shadow property takes a comma-separated list of shadows as its value.
+
+1 horizontal offset. A positive value will create a shadow to the right of the element, a negative value to the left.
+2 vertical offset. A positive value pushes the shadow down, creating a shadow on the bottom of the element. A negative value pushes the shadow up.
+3 (optional) is the blur distance of the shadow. Only positive values are allowed.
+4 (optional) the spread distance of the shadow. A positive value will cause the shadow shape to expand in all directions. A negative value contracts the shadow.
+5 color, (If it’s omitted, the spec states that it should default to the same as the color property of the element, or currentColor.)
+6 the key term inset for inset—or internal—shadows. (If you fail to specify inset, the default is for the shadow to be drawn outside of the element)
+
+*/
+.shaded-box {
+    box-shadow:
+        inset 1px 1px 84px rgba(0,0,0,0.24),
+        inset -1px -1px 84px rgba(0,0,0,0.24);
+}
+
+
+/*
+ single shadow
+  text-shadow: topOffset leftOffset blurRadius color
+*/
+.shaded-text {
+    text-shadow: 1px 1px 84px 16px rgba(0,0,0,0.24);
+}
+
+/*
+multiple shadows
+    text-shadow: topOffset1 leftOffset1 blurRadius1 color1,
+    topOffset2 leftOffset2 blurRadius2 color2,
+    topOffset3 leftOffset3 blurRadius3 color3;
+*/
+.multishaded-text {
+    text-shadow:
+        2px 2px 24px 16px rgba(0,0,0,0.24),
+        3px 3px 36px 16px rgba(0,0,0,0.24),
+        5px 5px 48px 16px rgba(0,0,0,0.24);
+}
